@@ -1,6 +1,10 @@
 import os
 
-uname=os.uname()[0]
+uname = ''
+try:
+    uname = os.uname()[0]
+except:
+    pass
 
 def getopenldapenv(options,buildout):
     #on everything else than linux patch configure too
